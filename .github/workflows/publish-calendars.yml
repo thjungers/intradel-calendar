@@ -1,0 +1,25 @@
+name: Publish calendars
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5.1.0
+        with:
+          python-version: "3.10"
+          cache: "pip"
+      - run: pip install -r requirements.txt
+      - name: Generate .ics calendars
+        run: python ./scripts/generate_ics.py
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ics/*.ics
