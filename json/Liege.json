@@ -1,0 +1,227 @@
+{
+    "url": [
+        "https://www.intradel.be/trier-ses-dechets/mon-calendrier-des-collectes.htm?commune=39",
+        "https://www.intradel.be/trier-ses-dechets/mon-calendrier-des-collectes.htm?commune=40",
+        "https://www.intradel.be/trier-ses-dechets/mon-calendrier-des-collectes.htm?commune=41",
+        "https://www.intradel.be/trier-ses-dechets/mon-calendrier-des-collectes.htm?commune=42",
+        "https://www.intradel.be/trier-ses-dechets/mon-calendrier-des-collectes.htm?commune=43"
+    ],
+    "collection_events": {
+        "_": {
+            "start": {
+                "day_offset": -1,
+                "time": "18:00:00"
+            },
+            "end": {
+                "day_offset": -1,
+                "time": "23:00:00"
+            }
+        },
+        "special": {
+            "start": {
+                "day_offset": 0,
+                "time": "09:30:00"
+            },
+            "end": {
+                "day_offset": 0,
+                "time": "13:30:00"
+            }
+        },
+        "mobile": {
+            "start": {
+                "day_offset": 0,
+                "time": "09:30:00"
+            },
+            "end": {
+                "day_offset": 0,
+                "time": "13:30:00"
+            }
+        }
+    },
+    "collection_types": {
+        "all": "Déchets PMC, organiques et résiduels et papiers-cartons",
+        "christmas_trees": "Collecte des sapins dégarnis de toute décoration",
+        "special": "Déchets spéciaux",
+        "mobile": "Recyparc mobile et déchets spéciaux",
+        "home": "Collecte trimestrielle à domicile"
+    },
+    "events": [
+        {
+            "name": "Concert du Nouvel An",
+            "date": "2024-01-14",
+            "location": "Centre culturel d'Ans"
+        }
+    ],
+    "collections": {
+        "christmas_trees": {
+            "Lundi": {
+                "dates": [
+                    "2024-01-02",
+                    "2024-01-08"
+                ],
+                "comments": {}
+            }
+        },
+        "all": {
+            "Lundi": {
+                "dates": [
+                    "2024-01-02",
+                    "2024-01-08",
+                    "2024-01-15",
+                    "2024-01-22",
+                    "2024-01-29",
+                    "2024-02-05",
+                    "2024-02-12",
+                    "2024-02-19",
+                    "2024-02-26",
+                    "2024-03-04",
+                    "2024-03-11",
+                    "2024-03-18",
+                    "2024-03-25",
+                    "2024-04-02",
+                    "2024-04-08",
+                    "2024-04-15",
+                    "2024-04-22",
+                    "2024-04-29",
+                    "2024-05-06",
+                    "2024-05-13",
+                    "2024-05-21",
+                    "2024-05-27",
+                    "2024-06-03",
+                    "2024-06-10",
+                    "2024-06-17",
+                    "2024-06-24",
+                    "2024-07-01",
+                    "2024-07-08",
+                    "2024-07-15",
+                    "2024-07-22",
+                    "2024-07-29",
+                    "2024-08-05",
+                    "2024-08-12",
+                    "2024-08-19",
+                    "2024-08-26",
+                    "2024-09-02",
+                    "2024-09-09",
+                    "2024-09-16",
+                    "2024-09-23",
+                    "2024-09-30",
+                    "2024-10-07",
+                    "2024-10-14",
+                    "2024-10-21",
+                    "2024-10-28",
+                    "2024-11-04",
+                    "2024-11-12",
+                    "2024-11-18",
+                    "2024-11-25",
+                    "2024-12-02",
+                    "2024-12-09",
+                    "2024-12-16",
+                    "2024-12-23",
+                    "2024-12-30"
+                ],
+                "comments": {
+                    "2024-01-02": "Reports du 01/01",
+                    "2024-04-02": "Reports du 01/04",
+                    "2024-05-21": "Reports du 20/05",
+                    "2024-11-12": "Reports du 11/11"
+                }
+            }
+        },
+        "special": {
+            "Lundi": {
+                "dates": [
+                    "2024-01-31",
+                    "2024-04-26",
+                    "2024-06-11",
+                    "2024-06-21",
+                    "2024-09-06"
+                ],
+                "comments": {
+                    "2024-01-31": "Saint-Léonard - Place Saint-Foy",
+                    "2024-04-26": "Rocourt - Avenue de la Closeraie",
+                    "2024-06-11": "Saint-Léonard - Place Saint-Foy",
+                    "2024-06-21": "Rocourt - Avenue de la Closeraie",
+                    "2024-09-06": "Saint-Léonard - Place Saint-Foy"
+                }
+            }
+        },
+        "mobile": {
+            "Lundi": {
+                "dates": [
+                    "2024-02-20",
+                    "2024-02-29",
+                    "2024-04-09",
+                    "2024-05-08",
+                    "2024-05-23",
+                    "2024-06-25",
+                    "2024-09-03",
+                    "2024-10-08",
+                    "2024-10-17",
+                    "2024-10-29",
+                    "2024-11-12"
+                ],
+                "comments": {
+                    "2024-02-20": "Sainte-Walburge - Place Sainte-Walburge",
+                    "2024-02-29": "Thier-à-Liège - Place Herbert-Hoover",
+                    "2024-04-09": "Sainte-Marguerite - Rue Ste-Marguerite/Place Goffin Bovy",
+                    "2024-05-08": "Thier-à-Liège - Place Herbert-Hoover",
+                    "2024-05-23": "Sainte-Walburge - Place Sainte-Walburge",
+                    "2024-06-25": "Sainte-Marguerite - Rue Ste-Marguerite/Place Goffin Bovy",
+                    "2024-09-03": "Thier-à-Liège - Place Herbert-Hoover",
+                    "2024-10-08": "Sainte-Marguerite - Rue Ste-Marguerite/Place Goffin Bovy",
+                    "2024-10-17": "Sainte-Walburge - Place Sainte-Walburge",
+                    "2024-10-29": "Thier-à-Liège - Place Herbert-Hoover",
+                    "2024-11-12": "Naniot - Boulevard J.-Th. Radoux"
+                }
+            }
+        },
+        "home": {
+            "Lundi": {
+                "dates": [
+                    "2024-03-05",
+                    "2024-03-06",
+                    "2024-03-13",
+                    "2024-03-15",
+                    "2024-03-26",
+                    "2024-06-04",
+                    "2024-06-05",
+                    "2024-06-12",
+                    "2024-06-21",
+                    "2024-06-25",
+                    "2024-09-03",
+                    "2024-09-04",
+                    "2024-09-11",
+                    "2024-09-20",
+                    "2024-09-24",
+                    "2024-12-03",
+                    "2024-12-04",
+                    "2024-12-11",
+                    "2024-12-20",
+                    "2024-12-24"
+                ],
+                "comments": {
+                    "2024-03-05": "Centre",
+                    "2024-03-06": "Sainte-Marguerite, Burenville, Glain",
+                    "2024-03-13": "Sainte-Walburge",
+                    "2024-03-15": "Rocourt",
+                    "2024-03-26": "Saint-Léonard, Coronmeuse, Thier-à-Liège",
+                    "2024-06-04": "Centre",
+                    "2024-06-05": "Sainte-Marguerite, Burenville, Glain",
+                    "2024-06-12": "Sainte-Walburge",
+                    "2024-06-21": "Rocourt",
+                    "2024-06-25": "Saint-Léonard, Coronmeuse, Thier-à-Liège",
+                    "2024-09-03": "Centre",
+                    "2024-09-04": "Sainte-Marguerite, Burenville, Glain",
+                    "2024-09-11": "Sainte-Walburge",
+                    "2024-09-20": "Rocourt",
+                    "2024-09-24": "Saint-Léonard, Coronmeuse, Thier-à-Liège",
+                    "2024-12-03": "Centre",
+                    "2024-12-04": "Sainte-Marguerite, Burenville, Glain",
+                    "2024-12-11": "Sainte-Walburge",
+                    "2024-12-20": "Rocourt",
+                    "2024-12-24": "Saint-Léonard, Coronmeuse, Thier-à-Liège"
+                }
+            }
+        }
+    }
+}
