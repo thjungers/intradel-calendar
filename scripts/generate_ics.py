@@ -11,6 +11,7 @@ from json_calendar_parser import JsonCalendarParser
 from pprint import pprint
 
 ICS_OUTPUT = Path("ics/")
+ICS_OUTPUT.mkdir(exist_ok=True)
 
 def main():
     for json_file in Path("json").glob("*.json"):
