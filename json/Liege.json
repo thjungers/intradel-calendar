@@ -1,11 +1,11 @@
 {
-    "url": [
-        "https://www.intradel.be/trier-ses-dechets/mon-calendrier-des-collectes.htm?commune=39",
-        "https://www.intradel.be/trier-ses-dechets/mon-calendrier-des-collectes.htm?commune=40",
-        "https://www.intradel.be/trier-ses-dechets/mon-calendrier-des-collectes.htm?commune=41",
-        "https://www.intradel.be/trier-ses-dechets/mon-calendrier-des-collectes.htm?commune=42",
-        "https://www.intradel.be/trier-ses-dechets/mon-calendrier-des-collectes.htm?commune=43"
-    ],
+    "url": {
+        "Lundi": "https://www.intradel.be/trier-ses-dechets/mon-calendrier-des-collectes.htm?commune=39",
+        "Mardi": "https://www.intradel.be/trier-ses-dechets/mon-calendrier-des-collectes.htm?commune=40",
+        "Mercredi": "https://www.intradel.be/trier-ses-dechets/mon-calendrier-des-collectes.htm?commune=41",
+        "Jeudi": "https://www.intradel.be/trier-ses-dechets/mon-calendrier-des-collectes.htm?commune=42",
+        "Vendredi": "https://www.intradel.be/trier-ses-dechets/mon-calendrier-des-collectes.htm?commune=43"
+    },
     "collection_events": {
         "_": {
             "start": {
