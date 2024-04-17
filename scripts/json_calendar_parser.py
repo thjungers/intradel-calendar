@@ -148,7 +148,13 @@ class JsonCalendarParser:
     def get_ics_calendars(self) -> dict[str, ics.Calendar]:
         calendars = {}
 
-        zones = self.collection_events.keys() - {DEFAULT_ZONES_KEYWORD}
+        zones = list(self.collection_events.keys())
+        try:
+            zones.remove(DEFAULT_ZONES_KEYWORD)
+        except ValueError:
+            # "_" not in zones: ok
+            pass
+
         if not zones:
             zones = [DEFAULT_ZONES_KEYWORD]
 
@@ -162,15 +168,19 @@ class JsonCalendarParser:
 
         return calendars
 
-    def save_ics_calendars(self, path: Path) -> None:
+    def save_ics_calendars(self, path: Path) -> list[tuple[str, Path]]:
         """Save the ICS calendar files to the given path. The path is appended with the zone name 
         (except if there are no zones) and the .ics extension.
         """
         calendars = self.get_ics_calendars()
 
+        paths = []
         for zone, calendar in calendars.items():
             calendar_path = make_ics_path(path, zone)
+            paths.append((zone, calendar_path))
             self._save_ics_calendar(calendar, calendar_path)
+        
+        return paths
         
     def _save_ics_calendar(self, calendar: ics.Calendar, path: Path) -> None:
         """Save a single ICS calendar to the given path."""
