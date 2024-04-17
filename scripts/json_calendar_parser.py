@@ -3,16 +3,16 @@ import json
 from pathlib import Path
 import arrow
 import ics
-from utils import get_arrow_datetime
+from utils import get_arrow_datetime, make_ics_path, DEFAULT_ZONES_KEYWORD
 
 TIMEZONE = "Europe/Brussels"
-DEFAULT_ZONES_KEYWORD = "_"
 ICS_CREATOR = "IntradelCalendars"
 EVENT_CREATED_DATE = arrow.now().shift(years=-1).replace(month=9, day=1, hour=12, minute=0, second=0)  # Required by the ICS specifications
 
 class JsonCalendarParser:
     def __init__(self, file: Path) -> None:
         self.file = file
+        self.zones = set()
 
         self._parse()
 
@@ -93,6 +93,8 @@ class JsonCalendarParser:
             zones = self.data["collections"][collection_type]
 
             for zone_name, zone in zones.items():
+                self.zones.add(zone_name)
+
                 for collection_date in zone["dates"]:
                     name = collection_event_name
                     if comment := zone["comments"].get(collection_date):
@@ -166,14 +168,9 @@ class JsonCalendarParser:
         """
         calendars = self.get_ics_calendars()
 
-        if calendar := calendars.get(DEFAULT_ZONES_KEYWORD):
-            self._save_ics_calendar(calendar, path.with_suffix(".ics"))
-        else:
-            for zone, calendar in calendars.items():
-                cal_path = path.with_name(
-                    path.name + "_" + zone.replace(" ", "-").lower()
-                ).with_suffix(".ics")
-                self._save_ics_calendar(calendar, cal_path)
+        for zone, calendar in calendars.items():
+            calendar_path = make_ics_path(path, zone)
+            self._save_ics_calendar(calendar, calendar_path)
         
     def _save_ics_calendar(self, calendar: ics.Calendar, path: Path) -> None:
         """Save a single ICS calendar to the given path."""
