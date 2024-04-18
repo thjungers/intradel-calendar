@@ -7,7 +7,7 @@ on:
 
 permissions:
   contents: write
-  
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -22,7 +22,11 @@ jobs:
       - run: pip install -r requirements.txt
       - name: Generate .ics calendars
         run: python ./scripts/generate_ics.py
+      - name: Extract changelog
+        run: cd scripts; python -m "from utils import get_changelog_version as gcv; print(gcv('${{ github.ref }}'))" > ../this_changelog.txt
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
           files: ics/*.ics
+          body_path: this_changelog.txt
+
