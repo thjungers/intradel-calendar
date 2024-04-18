@@ -23,7 +23,7 @@ jobs:
       - name: Generate .ics calendars
         run: python ./scripts/generate_ics.py
       - name: Extract changelog
-        run: cd scripts; python -m "from utils import get_changelog_version as gcv; print(gcv('${{ github.ref }}'))" > ../this_changelog.txt
+        run: python ./scripts/get_changelog_version.py > this_changelog.txt
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
