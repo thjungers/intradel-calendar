@@ -47,7 +47,7 @@ def get_changelog_version(version_tag: str) -> str:
     Parameters:
         version_tag: The version tag, optionnaly prepended by "refs/tags/".
     """
-    version = re.match("^(?:/refs/tags/)?(v.*)$", version_tag).group(1) # type: ignore
+    version = re.match("^(?:refs/tags/)?(v.*)$", version_tag).group(1) # type: ignore
 
     root = Path(__file__).parent.parent
 
