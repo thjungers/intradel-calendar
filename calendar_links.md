@@ -16,4 +16,5 @@
 
 [PDF source](https://www.intradel.be/trier-ses-dechets/mon-calendrier-des-collectes.htm?commune=65)
 
-[Theux](https://github.com/thjungers/intradel-calendar/releases/latest/download/Theux.ics)
+[Theux (Zone 1)](https://github.com/thjungers/intradel-calendar/releases/latest/download/Theux_zone-1.ics)
+[Theux (Zone 2)](https://github.com/thjungers/intradel-calendar/releases/latest/download/Theux_zone-2.ics)
