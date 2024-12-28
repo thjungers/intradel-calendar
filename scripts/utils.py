@@ -3,20 +3,23 @@
 from datetime import date, timedelta
 from pathlib import Path
 import re
+from typing import Optional
 import arrow
 
 ONEDAY = timedelta(days=1)
 DEFAULT_ZONES_KEYWORD = "_"
 
-def all_days_year(year: int, dayofweek: int) -> list[date]:
+def all_days_year(year: int, dayofweek: int, week_parity: Optional[str] = None) -> list[date]:
     range_start = date(year, 1, 1)
     range_end = date(year, 12, 31)
+    assert week_parity is None or week_parity in ("odd", "even")
 
     dates = []
     cur_date = range_start
     while cur_date <= range_end:
         if cur_date.isoweekday() == dayofweek:
-            dates.append(cur_date)
+            if week_parity is None or ((cur_date.isocalendar()[1] % 2 == 0) is (week_parity == "even")):
+                dates.append(cur_date)
         cur_date += ONEDAY
     return dates
 
